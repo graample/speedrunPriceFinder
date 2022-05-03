@@ -1,0 +1,29 @@
+{
+  "name": "speedrunpricefinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graample/speedrunPriceFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/graample/speedrunPriceFinder/issues"
+  },
+  "homepage": "https://github.com/graample/speedrunPriceFinder#readme",
+  "dependencies": {
+    "@neo4j/graphql": "^3.1.0",
+    "apollo-server": "^3.6.7",
+    "dotenv": "^16.0.0",
+    "graphql": "^16.4.0",
+    "neo4j-driver": "^4.4.5",
+    "nodemon": "^2.0.16"
+  }
+}
