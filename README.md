@@ -4,14 +4,13 @@ A Rather Ambitious MVP created by grample
 
 ## Features
 
-- Query an existing speedgame and find out how many runners have run the game
-- Pulls up detailed statistics
-- Tells you the price of the game on eBay
+- Enter an SRC username, and it'll tell you how much they're worth based off of current eBay prices
+- Pulls up detailed game, run, and price statistics
+- Sometimes it works
 
 ## Stack
 
 - React
 - Node
 - Express
-- GraphQL
-- Neo4J
+- Material UI
