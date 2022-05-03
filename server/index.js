@@ -1,38 +1,38 @@
-const fs = require('fs');
-const path = require('path');
-const { gql, ApolloServer } = require("apollo-server");
-const { Neo4jGraphQL } = require("@neo4j/graphql");
-const neo4j = require("neo4j-driver");
+// const fs = require('fs');
+// const path = require('path');
+// const { gql, ApolloServer } = require("apollo-server");
+// const { Neo4jGraphQL } = require("@neo4j/graphql");
+// const neo4j = require("neo4j-driver");
+// var { graphqlHTTP } = require('express-graphql');
+// require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
-var { graphqlHTTP } = require('express-graphql');
-require("dotenv").config();
 
-// graphql schema
-const typeDefs = fs.readFileSync(
-  path.join(__dirname, 'src/schema.graphql'),
-  'utf8'
-)
+// // graphql schema
+// const typeDefs = fs.readFileSync(
+//   path.join(__dirname, 'src/schema.graphql'),
+//   'utf8'
+// )
 
 
-// Neo4J connection
-const driver = neo4j.driver(
-  process.env.NEO4J_URI,
-  neo4j.auth.basic(process.env.NEO4J_USER, process.env.NEO4J_PASSWORD),
-);
+// // Neo4J connection
+// const driver = neo4j.driver(
+//   process.env.NEO4J_URI,
+//   neo4j.auth.basic(process.env.NEO4J_USER, process.env.NEO4J_PASSWORD),
+// );
 
-const neoSchema = new Neo4jGraphQL({ typeDefs, driver });
+// const neoSchema = new Neo4jGraphQL({ typeDefs, driver });
 
-neoSchema.getSchema().then((schema) => {
-    const server = new ApolloServer({
-      schema,
-    });
+// neoSchema.getSchema().then((schema) => {
+//     const server = new ApolloServer({
+//       schema,
+//     });
 
-    server.listen().then(({ url }) => {
-        console.log(`GraphQL server ready on ${url}`);
-    });
-});
+//     server.listen().then(({ url }) => {
+//         console.log(`GraphQL server ready on ${url}`);
+//     });
+// });
 
 
 // Express connection

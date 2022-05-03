@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Typography, TextField, Button } from '@mui/material';
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -25,10 +27,20 @@ class Search extends React.Component {
   render() {
     return (
       <div>
-        type in a speedrun.com username (exact case)
+        <Typography>type in a speedrun.com username (exact case)</Typography>
         <form>
-          <input type="text" onChange={this.handleQuery}></input>
-          <button onClick={this.searchHandler}>Search</button>
+          <TextField
+          id="standard-basic"
+          label="SRC username"
+          variant="standard"
+          onChange={this.handleQuery}
+          ></TextField>
+          <Button
+          onClick={this.searchHandler}
+          variant="outlined"
+          >
+            Search
+          </Button>
         </form>
       </div>
     );

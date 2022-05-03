@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { Typography } from '@mui/material';
+
 var ListItem = (props) => {
   return (
     <div>
-      {props.eachItem}
+      <Typography>{props.eachItem}</Typography>
     </div>
   )
 }

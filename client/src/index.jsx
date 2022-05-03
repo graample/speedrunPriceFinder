@@ -6,6 +6,15 @@ const root = createRoot(document.getElementById("app"));
 import Search from './components/Search.jsx';
 import List from './components/List.jsx';
 
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
+import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
+import { Typography } from '@mui/material';
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +40,7 @@ class App extends React.Component {
       }
     })
     .then(response => {
-      console.log(response.data.name + ' is worth ' + 'insert price amount here');
+      // console.log(response.data.name + ' is worth ' + 'insert price amount here');
       // console.log(response.data.games)
       this.setState({
         user: response.data.name,
@@ -55,7 +64,7 @@ class App extends React.Component {
     return (
       <div>
         <button onClick={this.handleTest}>test route to grample (should be 23)</button>
-        <h1>Speedrun Price Finder</h1>
+        <Typography variant="h2">Speedrun Price Finder</Typography>
         <Search handleSearch={this.handleSearch}/>
         <List user={this.state.user} list={this.state.list} worth={this.state.worth}/>
       </div>
