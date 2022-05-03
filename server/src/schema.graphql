@@ -1,6 +1,6 @@
 type Runner {
   name: String
-  knows: [Person!]! @relationship(type: "KNOWS", direction: OUT)
+  knows: [Runner!]! @relationship(type: "KNOWS", direction: OUT)
   friendCount: Int @cypher(statement:"RETURN SIZE((this)-[:KNOWS]->(:Person))")
   speedgames: [Game!]! @relationship(type: "RUNS", direction: OUT)
 }

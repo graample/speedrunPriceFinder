@@ -1,4 +1,4 @@
-# speedrunPriceFinder
+# Speedrun Price Finder
 
 A Rather Ambitious MVP created by grample
 
